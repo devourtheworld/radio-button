@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #091921;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container p{
+    color: #215e65;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.container label{
+    position: relative;
+}
+
+.container label input{
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    transition: 0.43s;
+}
+
+.container label .fa{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #091921;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 4px;
+    color: #6f6f6f;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                2px 2px 6px rgba(0, 0, 0, 0.8);
+    transition: 0.73s;
+}
+
+.container label .fa:hover{
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                2px 2px 6px rgba(0, 0, 0, 0.8),
+                inset -2px -2px 10px rgba(255, 255, 255, 0.05),
+                inset 2px 2px 10px rgba(0, 0, 0, 0.5);
+    /* color: rgba(179, 0, 0, 0.479); */
+    transition: 0.43s;
+}
+
+#yes:hover{
+    color: rgb(127, 165, 91);
+}
+
+#no:hover{
+    color: rgb(165, 91, 91);
+}
+
+.container label input:checked ~ .fa{
+    color: #ffffff;
+    box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+                inset 2px 2px 6px rgba(0, 0, 0, 1);
+    transition: 0.43s;
+    text-shadow: 0 0 5px #ffffff,
+                 0 0 20px #ffffff;
+}
+
+.container label input:checked ~ #no{
+    color: #ffffff;
+}
+
+.container label input:checked ~ #yes{
+    color: #ffffff;
+}
